@@ -3,4 +3,4 @@
 
 1. Crear una web con un reloj que muestre la siguiente información:
 
-!img/reloj.jpg
+![reloj](img/reloj.jpg)
