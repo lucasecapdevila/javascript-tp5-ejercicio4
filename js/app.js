@@ -10,22 +10,6 @@ const primerLetraMayuscula = (texto) => {
   return texto[0].toUpperCase() + texto.slice(1)
 }
 
-const formatoHora = (hora) => {
-  if (hora > 12){
-    hora = hora - 12
-    return '0' + hora
-  }
-  return hora
-}
-
-const agregarCero = (dato) => {
-  if(dato < 10){
-    dato = '0' + dato
-    return dato
-  }
-  return dato
-}
-
 
 
 //  Objeto fecha (dia-mes-año)
@@ -42,25 +26,10 @@ dia.innerText = fechaCompleta
 const verHora = () => {
   //  Objeto fecha (hora-minutos-segundos)
   let hora = new Date()
-  let horas = hora.getHours()
-  //  Agrego 0 (si es necesario)
-  horas = agregarCero(horas)
-  horas = formatoHora(horas)
-
-  let minutos = hora.getMinutes()
-  minutos = agregarCero(minutos)
-
-  let segundos = hora.getSeconds();
-  segundos = agregarCero(segundos)
-  const horaCompleta = `${horas}:${minutos}:${segundos}`
+  let horas = hora.toLocaleString('es', {hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true})
+  
+  const horaCompleta = `${horas}`
   parrafoHora.innerText = horaCompleta
 }
 
-
-
-
-
 setInterval(verHora, 1000)
-
-
-
