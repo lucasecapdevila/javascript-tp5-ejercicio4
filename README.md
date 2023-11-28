@@ -4,3 +4,7 @@
 1. Crear una web con un reloj que muestre la siguiente información:
 
 ![reloj](img/reloj.jpg)
+
+
+## Deploy en Netlify
+[Netlify-reloj](https://lucasecapdevila-reloj.netlify.app/)
